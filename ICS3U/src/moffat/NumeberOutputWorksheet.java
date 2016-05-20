@@ -1,6 +1,6 @@
 package moffat;
 
-public class NumeberOutputWorksheet {
+public class NumberOutputWorksheet {
 
 	public static void main(String[] args) 
 	{

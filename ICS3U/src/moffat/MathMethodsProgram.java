@@ -1,4 +1,5 @@
 package moffat;
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 /**
@@ -9,6 +10,10 @@ import java.util.Scanner;
  */
 public class MathMethodsProgram {
 
+	
+	//Formats number to 2 decimal places
+	public static DecimalFormat round = new DecimalFormat ("0.00");
+	
 	/**
 	 * Asks user for 2 numbers and calls 4 methods
 	 * @param args
@@ -65,7 +70,7 @@ public class MathMethodsProgram {
 	public static void divide(double numOne, double numTwo)
 	{
 		double answer = numOne / numTwo;
-		System.out.println(numOne + " ÷ " + numTwo + " = " + answer);
+		System.out.println(numOne + " ÷ " + numTwo + " = " + round.format(answer));
 		System.out.println("");		
 	}
 	

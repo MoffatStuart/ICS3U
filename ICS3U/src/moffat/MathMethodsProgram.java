@@ -20,6 +20,7 @@ public class MathMethodsProgram {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		@SuppressWarnings("resource")
 		Scanner scan = new Scanner(System.in);
 		
 		double num1;
@@ -30,11 +31,15 @@ public class MathMethodsProgram {
 		System.out.println("Please input another number");
 		num2 = scan.nextDouble();
 		
-		add(num1, num2);
-		subtract(num1, num2);
-		divide(num1, num2);
-		multiply(num1, num2);
-		
+					
+		System.out.println(num1 + " + " + num2 + " = " + round.format(add(num1, num2)));
+		System.out.println("");
+		System.out.println(num1 + " - " + num2 + " = " + round.format(subtract(num1, num2)));
+		System.out.println("");
+		System.out.println(num1 + " ÷ " + num2 + " = " + round.format(divide(num1, num2)));
+		System.out.println("");
+		System.out.println(num1 + " x " + num2 + " = " + round.format(multiply(num1, num2)));
+		System.out.println("");
 
 	}
 	
@@ -43,11 +48,10 @@ public class MathMethodsProgram {
 	 * @param numOne double
 	 * @param numTwo double
 	 */
-	public static void add(double numOne, double numTwo)
+	public static double add(double numOne, double numTwo)
 	{
-		double answer = numOne + numTwo;
-		System.out.println(numOne + " + " + numTwo + " = " + answer);
-		System.out.println("");
+		double answer = numOne + numTwo;		
+		return answer;
 	}
 	
 	/**
@@ -55,11 +59,10 @@ public class MathMethodsProgram {
 	 * @param numOne double
 	 * @param numTwo double
 	 */
-	public static void subtract(double numOne, double numTwo)
+	public static double subtract(double numOne, double numTwo)
 	{
-		double answer = numOne - numTwo;
-		System.out.println(numOne + " - " + numTwo + " = " + answer);
-		System.out.println("");
+		double answer = numOne - numTwo;		
+		return answer;
 	}
 	
 	/**
@@ -67,11 +70,10 @@ public class MathMethodsProgram {
 	 * @param numOne double
 	 * @param numTwo double
 	 */
-	public static void divide(double numOne, double numTwo)
+	public static double divide(double numOne, double numTwo)
 	{
-		double answer = numOne / numTwo;
-		System.out.println(numOne + " ÷ " + numTwo + " = " + round.format(answer));
-		System.out.println("");		
+		double answer = numOne / numTwo;		
+		return answer;
 	}
 	
 	/**
@@ -79,11 +81,10 @@ public class MathMethodsProgram {
 	 * @param numOne double
 	 * @param numTwo double
 	 */
-	public static void multiply(double numOne, double numTwo)
+	public static double multiply(double numOne, double numTwo)
 	{
-		double answer = numOne * numTwo;
-		System.out.println(numOne + " x " + numTwo + " = " + answer);
-		System.out.println("");
+		double answer = numOne * numTwo;		
+		return answer;
 	}
 
 }
